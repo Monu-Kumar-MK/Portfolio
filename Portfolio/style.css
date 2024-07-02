@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Georgia;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  li {
+    list-style: none;
+  }
+  /* NAVBAR STYLING STARTS */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: teal;
+    color: #fff;
+  }
+  
+  .nav-links a {
+    color: #fff;
+  }
+  
+  /* LOGO */
+  .logo {
+    font-size: 32px;
+  }
+  
+  /* NAVBAR MENU */
+  .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+  }
+  
+  .menu li:hover {
+    background-color: #4c9e9e;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  .menu li {
+    padding: 5px 14px;
+  }
+  
+  /* DROPDOWN MENU */
+  .services {
+    position: relative; 
+  }
+  
+  .dropdown {
+    background-color: rgb(1, 139, 139);
+    padding: 1em 0;
+    position: absolute; /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+  }
+  
+  .dropdown li + li {
+    margin-top: 10px;
+  }
+  
+  .dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+  }
+  
+  .dropdown li:hover {
+    background-color: #4c9e9e;
+  }
+  
+  .services:hover .dropdown {
+    display: block;
+  }
+  /* RESPONSIVE NAVBAR MENU STARTS */
+
+/* CHECKBOX HACK */
+
+input[type=checkbox] {
+    display: none;
+  } 
+  
+  /* HAMBURGER MENU */
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+  }
+  
+  /* APPLYING MEDIA QUERIES */
+  @media (max-width: 768px) {
+   .menu {
+      display:none;
+      position: absolute;
+      background-color:teal;
+      right: 0;
+      left: 0;
+      text-align: center;
+      padding: 16px 0;
+    }
+  
+    .menu li:hover {
+      display: inline-block;
+      background-color:#4c9e9e;
+      transition: 0.3s ease;
+    }
+  
+    .menu li + li {
+      margin-top: 12px;
+    }
+  
+    input[type=checkbox]:checked ~ .menu {
+      display: block;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .dropdown {
+      left: 50%;
+      top: 30px;
+      transform: translateX(35%);
+    }
+  
+    .dropdown li:hover {
+      background-color: #4c9e9e;
+    }
+  }
+  /* Hero Section */ 
+
+
+  .hero {
+    background-image: url('./Resorces/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-content {
+    text-align: center;
+    color:black;
+  }
+  
+  .hero-content h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #555;
+  }
+  
+  /* Hero Section end */
+
+  /* About Section */
+  .about {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .about-content hr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #f2f2f2;
+  }
+  
+  .about-content img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-size: 16px;
+  }
+  .about-content h3 {
+    font-size: 25px;
+    color: #4c9e9e;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  /* Oue Project */
+ /* Styles for the "Projects" section */
+.projects {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .projects h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .project {
+    width: 300px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .project img {
+    width: 200px;
+    height: 150px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .project h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .project p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .project-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .project-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Scrollbar style */
+  .project-container {
+    overflow-y: auto;
+    max-height: 400px;
+    scrollbar-width: thin;
+    scrollbar-color: #888888 #f2f2f2;
+  }
+  
+  .project-container::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .project-container::-webkit-scrollbar-track {
+    background-color: #f2f2f2;
+  }
+  
+  .project-container::-webkit-scrollbar-thumb {
+    background-color: #888888;
+    border-radius: 4px;
+  }
+  
+  .project-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555555;
+  }
+ 
+  /* Styles for the "Our Team" section */
+.our-team {
+    background-color: #4c9e9e;
+    text-align: center;
+  }
+  
+  .our-team h2 {
+    padding-top: 15px;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .team-member {
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .team-member h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .team-member h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font: 1em Georgia;
+  }
+  
+  .team-member p {
+    font-size: 16px;
+    color: #333333;
+
+  }
+  #para{
+    margin-top: 10px;
+    color:black;
+    font:1 em sans-serif;
+    text-align:space-between;
+  }
+  .social-links a {
+    display: inline-block;
+    margin: 5px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .social-links a:hover {
+    color:white;
+  }
+  /* team section end */
+
+  /* contact Section Start */
+  /* Styles for the "Contact" section */
+.contact {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .contact .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .contact h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .map {
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .error-message {
+    color: red;
+    margin-bottom: 10px;
+  }
+
+  footer {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
